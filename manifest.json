@@ -1,19 +1,28 @@
 {
   "name": "USM Login",
   "version": "0.1",
-  // "options_page": "options.html",
   "browser_action": {
-    "default_icon": "icon.png",
+    "default_icon": "icon_32.png",
     "default_popup": "options.html"
   },
 
-  // This loads the scripts on the correct domains
   "content_scripts": [ {
     "js": [ "assets/jquery.min.js", "assets/app.js" ],
-    "matches": [ "*://wifi-auth.usm.cl/*", "*://10.6.43.2:*/*" ] //, "*://1.1.1.1/*" ] // Uncoment that part for production
+    "matches": [ "*://wifi-auth.usm.cl/*", "*://10.6.43.2:*/*", "*://1.1.1.1/*" ]
   }],
 
   "background": {
     "scripts": [ "assets/background.js" ]
+  },
+
+  "permissions": [
+    "notifications"
+  ],
+
+  "icons": {
+    "16": "icon_16.png",
+    "32": "icon_32.png",
+    "48": "icon_48.png",
+    "128": "icon_128.png"
   }
 }
