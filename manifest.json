@@ -10,7 +10,7 @@
   // This loads the scripts on the correct domains
   "content_scripts": [ {
     "js": [ "assets/jquery.min.js", "assets/app.js" ],
-    "matches": [ "*://wifi-auth.usm.cl/*" ] //, "*://1.1.1.1/*" ] // Uncoment that part for production
+    "matches": [ "*://wifi-auth.usm.cl/*", "*://10.6.43.2:*/*" ] //, "*://1.1.1.1/*" ] // Uncoment that part for production
   }],
 
   "background": {

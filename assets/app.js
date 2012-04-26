@@ -31,5 +31,19 @@ $(function(){
         $('form#custom_form').submit();
       }
     });
+  } else if (location.href.match("10.6.43.2")) {
+    chrome.extension.sendRequest({credentials: "di"}, function(response) {
+      if (response.username && response.password) {
+        console.log("-- Setting credentials");
+        $('input[name=auth_user]').val(response.username);
+        $('input[name=auth_pass]').val(response.password);
+
+        console.log("-- Injecting hacky stuff");
+        addInput("accept", "Acceder", "form");
+
+        console.log("-- Submitting");
+        $('form').submit();
+      }
+    });
   }
 });
