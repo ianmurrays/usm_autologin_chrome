@@ -1,0 +1,20 @@
+.container {
+  width: 410px;
+}
+
+.center {
+  text-align: center;
+}
+
+.controls input {
+  height: 28px;
+}
+
+.logo {
+  padding-left: 30px;
+}
+
+.footer {
+  border-top: 1px solid #ccc; 
+  padding-top: 5px;
+}
