@@ -11,5 +11,12 @@ chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
       username: localStorage['di_username'],
       password: localStorage['di_password']
     });
+  } else if (typeof request.storeRedirect != "undefined") {
+    // Store a redirection url on localStorage
+    localStorage['redirect_url'] = request.storeRedirect;
+  } else if (typeof request.requestStoreRedirect != "undefined") {
+    sendResponse({
+      url: localStorage['redirect_url']
+    });
   }
 });
