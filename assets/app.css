@@ -1,3 +1,9 @@
+.title {
+	background-color:#f1f1f1;
+	padding:10px;
+	border-bottom:#ddd 1px solid;
+}
+
 .container {
   width: 410px;
 }
@@ -14,7 +20,11 @@
   padding-left: 30px;
 }
 
-.footer {
+.copy {
   border-top: 1px solid #ccc; 
-  padding-top: 5px;
+  padding: 5px 0px;
+}
+
+.padded {
+  padding: 0px 10px;
 }
